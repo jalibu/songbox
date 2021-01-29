@@ -1,0 +1,20 @@
+{
+  "faq": [
+    {
+      "q": "Mein Lieblingslied fehlt :-(",
+      "a": "Das ist sehr schade. Du kannst das Lied aber an die unter <a href='#contact''>Kontakt</a> angegebene E-Mail Adresse schicken. Dann wird es vielleicht für's nächste Mal in die Datenbank aufgenommen."
+    },
+    {
+      "q": "Kann ich selbst<br>Lieder ergänzen?",
+      "a": "Momentan kann die Datenbank leider nicht 'im laufenden Betrieb' erweitert werden. Gerne nehme ich aber weitere Lieder per <a href='#contact'>Mail</a> entgegen."
+    },
+    {
+      "q": "Wie funktioniert das?",
+      "a": "Das Pfadi Lieder-Kiosk basiert auf dem Microcomputer 'Raspberry Pi'. Über WLAN kann man per Smartphone eine Offline-Lieder-Datenbank nach Liedern durchsuchen.<br>Beim Klick auf den 'Drucken'-Knopf, werden die Liedzeilen passend zur Papierbreite vorformatiert und anschließend an den Thermodrucker gesendet."
+    },
+    {
+      "q": "Ich will auch so eine Box.",
+      "a": "Den Programm-Code und Bauplan für die Box stelle ich gerne kostenfrei zur Verfügung. Sprich mich an oder <a href='#contact'>schreib mir</a>."
+    }
+  ]
+}

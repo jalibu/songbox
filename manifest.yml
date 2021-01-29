@@ -1,0 +1,7 @@
+---
+applications:
+ - name: songbox
+   random-route: true
+   memory: 2048M
+   environment:
+  - NPM_CONFIG_PRODUCTION=false

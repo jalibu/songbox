@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print</title>
+    <style>
+        html {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+        }
+
+        body {
+            margin: 0 auto;
+        }
+
+        .songtext {
+            width: 384px;
+        }
+
+        .chordline span {
+            position: relative;
+            line-height: 2
+        }
+
+        .chordline span strong {
+            position: absolute;
+            top: -1em;
+            left: 0;
+            font: bold 75%/1 sans-serif;
+        }
+
+        .chordline span strong span {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h2></h2>
+<div class="songtext" id="songText"></div>
+</body>
+</html>
