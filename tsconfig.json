@@ -1,20 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es6",
     "module": "commonjs",
-    "removeComments": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noImplicitThis": true,
     "sourceMap": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "outDir": "dist",
-    "rootDir": "src",
-    "allowJs": false
-  },
-  "exclude": [
-    "gruntfile.js",
-    "node_modules",
-    "src/static_html",
-    "src/database_crawlers"
-  ]
+    "target": "es6"
+  }
 }

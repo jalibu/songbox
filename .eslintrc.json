@@ -1,0 +1,7 @@
+{
+    "extends": ["airbnb-typescript-prettier"],
+    "ignorePatterns": ["*.js"],
+    "rules": {
+        "no-restricted-syntax": "off"
+    }
+  }

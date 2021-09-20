@@ -1,4 +1,4 @@
-import {WebServer} from './WebServer';
+import WebServer from "./WebServer";
 
 const restEndpointServer = new WebServer();
 restEndpointServer.startServer();
