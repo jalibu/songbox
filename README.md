@@ -29,6 +29,17 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Update Song Database
+```bash
+# Decode database
+$ npm run db-decode
+
+# Make changes in data/songs_decoded.xml
+
+# Encode database
+$ npm run db-encode
+```
+
 ## License
 
-Nest is [MIT licensed](LICENSE).
+[MIT licensed](LICENSE).

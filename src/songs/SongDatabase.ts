@@ -7,7 +7,8 @@ export default class SongDatabase {
   private songs: Song[] = [];
 
   constructor() {
-    const xml = fs.readFileSync('data/songs.xml', 'utf8');
+    const base64Database = fs.readFileSync('data/songs.db', 'utf8');
+    const xml = Buffer.from(base64Database, 'base64').toString('utf8');
     const jsonObj = parser.parse(xml, {}, true);
 
     jsonObj.songs.song.forEach((song, index) => {
