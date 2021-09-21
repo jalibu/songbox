@@ -1,10 +1,10 @@
 {
   "name": "songbox",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "version": "1.0.0",
+  "description": "Liederbuch Zuhause liegen lassen? Dein neues Lieblingslied fehlt dir? Das Pfadi Lieder-Kiosk hilft.",
+  "author": "Jan.Litzenburger@gmail.com",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
