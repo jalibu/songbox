@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Pfadi-Lieder Kiosk</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/vendor/bootstrap.css" rel="stylesheet">
+    <link href="css/vendor/jquery.typeahead.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="css/vendor/all.css" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link href="css/vendor/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/bootstrap.bundle.js"></script>
+    <script src="js/vendor/jquery.typeahead.js"></script>
+    <script defer src="js/vendor/all.js"></script> <!--load all styles -->
+
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Pfadi Lieder-Kiosk</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#search">Suche</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Info & Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="masthead text-center text-white d-flex">
+    <div class="container my-auto">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="text-uppercase">
+                    <strong>Deine Lieblings Pfadi Lieder zum Ausdrucken</strong>
+                </h1>
+                <hr>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <p class="text-faded mb-5 text-shadow">Liederbuch Zuhause liegen lassen? Dein neues Lieblingslied fehlt
+                    dir? Das Pfadi Lieder-Kiosk hilft. Einfach ausdrucken. Jetzt und hier.</p>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#search">Lied finden</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="bg-primary" id="search">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading text-white">Suche</h2>
+                <hr class="light my-4">
+                <p class="text-faded mb-4">Suche nach Titel oder einer bekannten Liedzeile.</p>
+                <form class="navbar-form navbar-left">
+                    <div class="typeahead__container">
+                        <div class="typeahead__field">
+
+                        <span class="typeahead__query">
+                            <input class="js-typeahead"
+                                   name="q"
+                                   type="search"
+                                   autofocus
+                                   autocomplete="off">
+                        </span>
+                            <span class="typeahead__button">
+                            <button class="btn btn-default" type="submit">
+                                <span class="typeahead__search-icon"></span>
+                            </button>
+                        </span>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="searchResults" style="display: none">
+        <hr class="light my-4">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <h5></h5>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input cb-song-filter" type="checkbox" checked
+                                           id="cbIncludeTitle"
+                                           value="option1"> Im Titel suchen
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input cb-song-filter" type="checkbox" checked
+                                           id="cbIncludeText"
+                                           value="option1"> Im Text suchen
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input cb-song-filter" type="checkbox" id="cbChordsOnly"
+                                           value="option2"> Nur Lieder mit Akkorden
+                                </label>
+                            </div>
+                        </div>
+                        <ul class="pagination pagination-sm"></ul>
+                        <div id="searchResultsContent"></div>
+                        <ul class="pagination pagination-sm"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8 mx-auto text-center">
+        <hr class="light my-4">
+        <p class="text-faded mb-4" id="databaseSize"></p>
+    </div>
+
+
+</section>
+
+
+<section id="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading">Häufig gestellte Fragen</h2>
+                <hr class="my-4">
+                <p class="mb-5">Finde hier Antworten auf die am häufigsten gestellten Fragen. Wenn du keine Antwort
+                    findest, dann kannst du gerne <a href="#contact">Kontakt</a> zur mir aufnehmen.</p>
+                <div id="accordion">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading">Info & Kontakt</h2>
+                <hr class="my-4">
+                <p class="mb-5">Dies ist ein privates Projekt. Die Liedtexte unterliegen dem
+                    Urheberrecht des jeweilgen Verfassers. Nur zur privaten Nutzung. Weitergabe oder Verkauf
+                    verboten.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 ml-auto text-center">
+                <i class="fas fa-phone fa-3x mb-3 sr-contact"></i>
+                <p>+49 179 56 36 818</p>
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+                <i class="fas fa-envelope fa-3x mb-3 sr-contact"></i>
+                <p>
+                    <a href="mailto:your-email@your-domain.com">Liederkiosk@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="songTextModal" tabindex="-1" role="dialog" aria-labelledby="songTextModal"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="songTextTitle">--</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="alert alert-danger" id="modalAlert" role="alert" style="display: hidden;"><i
+                    class="fa fa-exclamation-triangle"></i>
+            </div>
+            <div class="modal-body" id="songText">--
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+                <button type="button" id="songTextPrintBtn" class="btn btn-primary">Drucken</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#songTextPrintBtn').click(function () {
+        let btn = $(this);
+        let alert = $('#modalAlert');
+        alert.hide();
+        btn.prop("disabled", true);
+        btn.html('<i class="fa fa-refresh fa-spin"></i> Wird gedruckt...');
+        var songId = $(this).data('song-id');
+        $.get("print/" + songId, function (data) {
+            if (data.error) {
+                alert.html('Hoppla, da lief was schief: ' + data.error);
+                alert.show();
+                $('#songTextModal').animate({scrollTop: 0}, 'slow');
+            } else {
+                alert.hide();
+                $('#songTextModal').modal('hide');
+            }
+            btn.html('Drucken');
+            btn.prop("disabled", false);
+        });
+
+    });
+</script>
+
+<!-- Plugin JavaScript -->
+<script src="js/vendor/jquery.easing.js"></script>
+<script src="js/vendor/scrollreveal.js"></script>
+<script src="js/vendor/jquery.magnific-popup.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/creative.js"></script>
+<script src="js/searchbar.js"></script>
+<script src="js/faq.js"></script>
+
+</body>
+</html>
